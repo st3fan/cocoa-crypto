@@ -6,6 +6,10 @@ MessageDigest and Mac calculatation. It was written to be able to use
 a Cocoa friendly API instead of the lower level OpenSSL or
 CommonCrypto code.
 
+The wrappers for with 'providers' to implement the actual crypto
+operations. On Leopard and iPhone there is a CommonCrypto provider and
+on older OS X versions you can fall back to the OpenSSL provider.
+
 *Examples*
 
 The following code calculates a HMAC SHA1 digest:
