@@ -1,0 +1,27 @@
+
+*Introduction*
+
+This is a Cocoa wrapper for cryptographic primitives like
+MessageDigest and Mac calculatation. It was written to be able to use
+a Cocoa friendly API instead of the lower level OpenSSL or
+CommonCrypto code.
+
+*Examples*
+
+The following code calculates a HMAC SHA1 digest:
+
+Mac* mac = [Mac macWithAlgorithm: @"SHA1" key: [@"Secret" dataUsingEncoding: NSASCIIStringEncoding]];
+[mac updateWithString: @"Hello, world!" encoding: NSASCIIStringEncoding];
+NSData* digest = [mac digest];
+
+The following code calculates an MD5 digest:
+
+MessageDigest* messageDigest = [MessageDigest messageDigestWithAlgorithm: @"SHA1"];
+[messageDigest updateWithString: @"Hello, world!" encoding: NSASCIIStringEncoding];
+NSData* digest = [messageDigest digest];
+
+*Todo*
+
+The Mac code uses the CommonCrypto library while the MessageDigest
+code uses OpenSSL. Use CommonCrypto for both so that the code will
+also work on the iPhone.
