@@ -47,6 +47,7 @@ Class gDefaultMacProvider = nil;
          return nil;
       }
    }
+   return nil;
 }
 
 - (id) initWithAlgorithm: (NSString*) algorithm key: (NSData*) key provider: (Class) provider

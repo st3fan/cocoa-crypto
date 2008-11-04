@@ -46,6 +46,7 @@ Class gDefaultMessageDigestProvider = nil;
          return nil;
       }
    }
+   return nil;
 }
 
 - (id) initWithAlgorithm: (NSString*) algorithm provider: (Class) provider
