@@ -37,7 +37,7 @@ NSMutableDictionary* sCommonCryptoHmacAlgorithms;
 - (id) initWithAlgorithm: (NSString*) algorithm key: (NSData*) key
 {
    NSNumber* algorithmCode = [sCommonCryptoHmacAlgorithms valueForKey: algorithm];
-   if (algorithmCode = nil) {
+   if (algorithmCode == nil) {
       return nil;
    }
 
